@@ -1,0 +1,39 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+# Web Routes
+
+index:
+   path: /
+   controller: App\Controller\HomeController::index
+
+short_urls:
+    path: /short-urls
+    controller: App\Controller\ShortenUrlsController::index
+    methods: [GET]
+
+short_url_detail:
+    path: /short-urls/{id}
+    controller: App\Controller\ShortenUrlsController::show
+    methods: [GET]
+
+url_forward:
+   path: /{code}
+   controller: App\Controller\HomeController::url_forward
+
+
+# API Routes
+
+api_login:
+    path: /api/login
+    controller: App\Controller\Api\LoginController::index
+    methods: [POST]
+
+api_make_url_short:
+    path: /api/shorten-url
+    controller: App\Controller\Api\ShortenUrlController::make
+    methods: [POST]
+
+
+

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+
+<h1>Products</h1>
+<p><a href="{{ path('new_product') }}">New Product</a></p>
+<table border="1">
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Size</th>
+</thead>
+<tbody>
+{% for product in products %}
+<tr>
+<td><a href="{{ path('product_detail', {'id':product.id}) }}">{{ product.name }}</a></td>
+<td>{{ product.description }}</td>
+<td>{{ product.size }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+
+
+{% endblock %}

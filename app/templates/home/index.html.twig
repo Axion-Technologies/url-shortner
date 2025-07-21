@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h3>New url shortner</h3>
+<br>
+<span id="shorten-url">
+<input class="form-control" v-model="longUrl" @keyup.enter="shortenUrl" @paste="clearOldShortUrl" placeholder="Paste long url here and hit enter">
+<br><br>
+<b><div id="shortened-url"></div></b>
+</div>
+<script src="/static/js/app/shorten_url.js"></script>
+{% endblock %}

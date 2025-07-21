@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+
+<h1>New Product</h1>
+<form method="post" action="">
+<input type="text" name="name" placeholder="Add product name"><br><br>
+<input type="number" name="size" placeholder="Enter product size"><br><br>
+<textarea name="description" placeholder="Add a product desctiption"></textarea><br><br>
+<button type="submit">Save</button>
+</form>
+
+{% endblock %}
